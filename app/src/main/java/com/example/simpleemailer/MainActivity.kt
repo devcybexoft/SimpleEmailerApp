@@ -18,11 +18,11 @@ class MainActivity: Activity() {
         val emailMsgText: String = findViewById<EditText>(R.id.emailTextEditText).toString()
         sendButton.setOnClickListener {
             Toast.makeText(this,"Sending message...",Toast.LENGTH_SHORT).show()
-            val intent = Intent(Intent.ACTION_SENDTO)
-            intent.data = Uri.parse("mailto: ${emailTo}")
-            intent.putExtra(Intent.EXTRA_EMAIL, emailMsgText)
-            intent.putExtra(Intent.EXTRA_SUBJECT, "test message from android app")
-            startActivity(intent)
+            val intentEmailer = Intent(Intent.ACTION_SENDTO)
+            intentEmailer.data = Uri.parse("mailto: ${emailTo}")
+            intentEmailer.putExtra(Intent.EXTRA_EMAIL, emailMsgText)
+            intentEmailer.putExtra(Intent.EXTRA_SUBJECT, "test message from android app")
+            startActivity(intentEmailer)
         }
 
     }
