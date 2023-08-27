@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/labelEmailAddr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Email адреса"
+        app:layout_constraintStart_toEndOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@id/emailAddrEditText"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/labelEmailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Текст повідомлення"
+        app:layout_constraintStart_toEndOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@id/emailTextEditText"
+        android:layout_marginTop="8dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="160dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <EditText
+        android:id="@+id/emailAddrEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:hint="Введіть email адресату"
+        android:text="  "
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailTextEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="  "
+        android:hint="Введіть текст повідомлення"
+        app:layout_constraintLeft_toRightOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/emailAddrEditText" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send email"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/labelEmailText"
+        android:layout_marginTop="16dp"
+     />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
